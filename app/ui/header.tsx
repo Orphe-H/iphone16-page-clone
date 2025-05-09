@@ -11,17 +11,17 @@ export default function Header() {
 
 export function MobileNav() {
 	return (
-		<nav className="bg-black h-[48px] flex items-center justify-center">
+		<nav className="bg-black h-[46px] flex items-center justify-center ml:hidden">
 			<div className="w-full max-w-5xl flex items-center justify-between">
 				<Link href="/">
-					<div className="px-1 mx-4 text-gray-300 hover:text-gray-100">
+					<div className="px-1 mx-3 text-gray-300 hover:text-gray-100">
 						<span>
-							<i className="fa-brands fa-apple  text-lg"></i>
+							<i className="fa-brands fa-apple text-[21px]"></i>
 						</span>
 					</div>
 				</Link>
 
-				<div className="flex items-center gap-8 text-gray-300 text-sm pr-5">
+				<div className="flex items-center gap-8 text-gray-300 text-lg pr-4">
 					<div>
 						<Link
 							href="#"
@@ -43,7 +43,7 @@ export function MobileNav() {
 							href="#"
 							className="text-gray-400 hover:text-gray-200 focus:text-gray-200"
 						>
-							<i className="fa-solid fa-bars "></i>
+							<i className="fa-solid fa-bars"></i>
 						</Link>
 					</div>
 				</div>
@@ -54,17 +54,17 @@ export function MobileNav() {
 
 export function DesktopNav() {
 	return (
-		<nav className="bg-black h-[48px] flex items-center justify-center">
+		<nav className="bg-black h-[46px] hidden min-ml:flex items-center justify-center">
 			<div className="w-full max-w-5xl flex items-center justify-between">
 				<Link href="/">
 					<div className="px-1 mx-4 text-gray-300 hover:text-gray-100">
 						<span>
-							<i className="fa-brands fa-apple  text-lg"></i>
+							<i className="fa-brands fa-apple text-lg"></i>
 						</span>
 					</div>
 				</Link>
 
-				<div className="flex items-center justify-evenly gap-4 text-gray-300 text-xs w-full pr-1">
+				<div className="flex items-center justify-evenly gap-4 text-gray-300 text-xs w-full pr-5">
 					<div>
 						<Link href="#" className="hover:text-gray-100">
 							<span>Store</span>
