@@ -1,6 +1,7 @@
 export const MENUS = [
 	{
 		key: "store",
+		prelabel: "Acheter",
 		label: "Store",
 		links: [
 			{ label: "Tout derniers produits", href: "#" },
@@ -35,6 +36,7 @@ export const MENUS = [
 	},
 	{
 		key: "mac",
+		prelabel: "Univers Mac",
 		label: "Mac",
 		links: [
 			{ label: "Découvrir tous les Mac", href: "#" },
@@ -78,6 +80,7 @@ export const MENUS = [
 	},
 	{
 		key: "ipad",
+		prelabel: "Univers iPad",
 		label: "iPad",
 		links: [
 			{ label: "Découvrir tous les iPad", href: "#" },
@@ -119,6 +122,7 @@ export const MENUS = [
 	},
 	{
 		key: "iphone",
+		prelabel: "Univers iPhone",
 		label: "iPhone",
 		links: [
 			{ label: "Découvrir tous les iPhone", href: "#" },
@@ -160,6 +164,7 @@ export const MENUS = [
 	},
 	{
 		key: "watch",
+		prelabel: "Univers Apple Watch",
 		label: "Watch",
 		links: [
 			{ label: "Découvrir toutes les Apple Watch", href: "#" },
@@ -200,6 +205,7 @@ export const MENUS = [
 	},
 	{
 		key: "vision",
+		prelabel: "Univers Vision",
 		label: "Vision",
 		links: [{ label: "Découvrir Apple Vision Pro", href: "#" }],
 		comparisonBlock: [
@@ -228,6 +234,7 @@ export const MENUS = [
 	},
 	{
 		key: "airpods",
+		prelabel: "Univers AirPods",
 		label: "AirPods",
 		links: [
 			{ label: "Découvrir tous les AirPods", href: "#" },
@@ -260,6 +267,7 @@ export const MENUS = [
 	},
 	{
 		key: "tv_maison",
+		prelabel: "Univers TV & Maison",
 		label: "TV & Maison",
 		links: [
 			{ label: "Découvrir TV & Maison", href: "#" },
@@ -298,6 +306,7 @@ export const MENUS = [
 	},
 	{
 		key: "divertissements",
+		prelabel: "Univers Divertissements",
 		label: "Divertissements",
 		links: [
 			{ label: "Découvrir les services de divertissement", href: "#" },
@@ -323,6 +332,7 @@ export const MENUS = [
 	},
 	{
 		key: "accessoires",
+		prelabel: "Acheter des accessoires",
 		label: "Accessoires",
 		links: [
 			{ label: "Voir tous les accessoires", href: "#" },
@@ -348,6 +358,7 @@ export const MENUS = [
 	},
 	{
 		key: "assistance",
+		prelabel: "Univers Assistance",
 		label: "Assistance",
 		links: [
 			{ label: "iPhone", href: "#" },
