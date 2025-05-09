@@ -1,11 +1,11 @@
 import Footer from "./ui/footer";
 import Main from "./ui/main";
-import Nav from "./ui/nav";
+import Header from "./ui/header";
 
 export default function Home() {
   return (
     <div>
-		<Nav />
+		<Header />
 		<Main />
 		<Footer />
 	</div>
