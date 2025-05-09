@@ -41,7 +41,7 @@ export function MobileNav() {
 			</nav>
 
 			{isMenuOpen && (
-				<div className="fixed inset-0 bg-background z-50 flex flex-col">
+				<div className="fixed inset-0 bg-background z-50 flex flex-col text-gray-200">
 					<div className="grid grid-cols-16 py-3">
 						{activeSubMenu && (
 							<button
@@ -126,18 +126,125 @@ export function MobileNav() {
 					)}
 
 					{activeSubMenu === "store" && (
-						<div className="grid grid-cols-16 px-4">
-							<ul className="col-start-2 col-span-14 flex flex-col gap-6 text-lg">
-								<li>
-									<Link href="#">Apple Music</Link>
+						<div className="grid grid-cols-16">
+							<ul className="col-span-14 col-start-2 flex flex-col text-2xl font-semibold">
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										Tout derniers produits
+									</Link>
 								</li>
-								<li>
-									<Link href="#">iCloud</Link>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										Mac
+									</Link>
 								</li>
-								<li>
-									<Link href="#">Apple TV+</Link>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										iPad
+									</Link>
+								</li>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										iPhone
+									</Link>
+								</li>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										Apple Watch
+									</Link>
+								</li>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										Apple Vision Pro
+									</Link>
+								</li>
+								<li className="py-2">
+									<Link href="#" className="block w-full">
+										Accessoires
+									</Link>
 								</li>
 							</ul>
+
+							<div className="col-span-14 col-start-2 mt-10 flex space-x-20 text-lg">
+								<div>
+									<div className="text-gray-400 mb-3">
+										Liens rapides
+									</div>
+									<ul className="font-medium">
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Trouver un magasin
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Etat de votre commande
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Apple Trade In
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Financement
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Configuration personnalisée
+											</Link>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<div className="text-gray-400 text-lg">
+										Acheter - Programmes spéciaux
+									</div>
+									<ul className="font-medium">
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Produits reconditionnés
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Éducation
+											</Link>
+										</li>
+										<li className="py-1">
+											<Link
+												href="#"
+												className="block w-full"
+											>
+												Entreprises
+											</Link>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					)}
 				</div>
