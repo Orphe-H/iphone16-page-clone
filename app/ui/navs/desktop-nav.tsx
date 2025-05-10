@@ -65,15 +65,6 @@ export function DesktopNav() {
 				closeSubmenu();
 				return;
 			}
-
-			// check if mouse is ouf max width
-			if (navRef.current) {
-				const navRect = navRef.current.getBoundingClientRect();
-				if (e.clientX < navRect.left || e.clientX > navRect.right) {
-					closeSubmenu();
-					return;
-				}
-			}
 		}
 
 		function handleMouseLeave() {
