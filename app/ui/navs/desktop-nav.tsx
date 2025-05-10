@@ -60,7 +60,6 @@ export function DesktopNav() {
 			closeSubmenu();
 		}
 
-		// Stockez la référence courante dans une variable
 		const currentWrapperRef = wrapperRef.current;
 
 		if (activeSubMenu && currentWrapperRef) {
