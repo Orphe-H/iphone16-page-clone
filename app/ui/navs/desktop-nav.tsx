@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { MENUS } from "@/libs/consts";
 
 export function DesktopNav() {
 	const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+	const wrapperRef = useRef<HTMLDivElement>(null);
+	const navRef = useRef<HTMLDivElement>(null);
+	const submenuRef = useRef<HTMLDivElement>(null);
 
 	const openSubmenu = (menuKey: string) => {
 		setActiveSubMenu(menuKey);
@@ -21,12 +24,80 @@ export function DesktopNav() {
 
 	const activeMenu = getActiveMenuData();
 
+	useEffect(() => {
+		function handleMouseMove(e: MouseEvent) {
+			if (!wrapperRef.current) return;
+
+			// check if mouse is out of wrapper
+			if (!wrapperRef.current.contains(e.target as Node)) {
+				closeSubmenu();
+				return;
+			}
+
+			// check if mouse hover icons
+			const target = e.target as HTMLElement;
+			const isOnIcons =
+				target.closest(".search-icon") ||
+				target.closest(".bag-icon") ||
+				target.closest(".apple-icon");
+
+			if (isOnIcons) {
+				closeSubmenu();
+				return;
+			}
+
+			// check if mouse is ouf max width
+			if (navRef.current) {
+				const navRect = navRef.current.getBoundingClientRect();
+				if (e.clientX < navRect.left || e.clientX > navRect.right) {
+					closeSubmenu();
+					return;
+				}
+			}
+		}
+
+		function handleMouseLeave() {
+			closeSubmenu();
+		}
+
+		// Stockez la référence courante dans une variable
+		const currentWrapperRef = wrapperRef.current;
+
+		if (activeSubMenu && currentWrapperRef) {
+			document.addEventListener("mousemove", handleMouseMove);
+			currentWrapperRef.addEventListener("mouseleave", handleMouseLeave);
+		}
+
+		return () => {
+			document.removeEventListener("mousemove", handleMouseMove);
+			if (currentWrapperRef) {
+				currentWrapperRef.removeEventListener(
+					"mouseleave",
+					handleMouseLeave
+				);
+			}
+		};
+	}, [activeSubMenu]);
+
 	return (
-		<>
-			<nav className="bg-black h-[46px] hidden min-ml:flex items-center justify-center">
+		<div
+			ref={wrapperRef}
+			className="hidden min-ml:flex flex-col bg-black relative"
+			onMouseLeave={() => {
+				// close when mouse is out of the wrappers
+				if (!submenuRef.current?.contains(document.activeElement)) {
+					closeSubmenu();
+				}
+			}}
+		>
+			{/* main nav */}
+			<nav
+				ref={navRef}
+				className="h-[46px] flex items-center justify-center"
+			>
 				<div className="w-full max-w-5xl flex items-center justify-between">
 					<Link href="/">
-						<div className="px-1 mx-4 text-gray-300 hover:text-gray-100">
+						<div className="apple-icon px-1 mx-4 text-gray-300 hover:text-gray-100">
 							<span>
 								<i className="fa-brands fa-apple text-lg"></i>
 							</span>
@@ -48,10 +119,13 @@ export function DesktopNav() {
 								<span>{menu.label}</span>
 							</Link>
 						))}
-						<Link href="#" className="hover:text-gray-100">
+						<Link
+							href="#"
+							className="search-icon hover:text-gray-100"
+						>
 							<i className="fa-solid fa-magnifying-glass text-sm"></i>
 						</Link>
-						<Link href="#" className="hover:text-gray-100">
+						<Link href="#" className="bag-icon hover:text-gray-100">
 							<i className="fa-solid fa-bag-shopping text-sm"></i>
 						</Link>
 					</div>
@@ -61,9 +135,9 @@ export function DesktopNav() {
 			{/* Submenu */}
 			{activeMenu && (
 				<div
-					className="bg-black hidden min-ml:flex justify-center"
+					ref={submenuRef}
+					className="bg-black flex justify-center absolute top-full left-0 right-0"
 					onMouseEnter={() => openSubmenu(activeMenu.key)}
-					onMouseLeave={closeSubmenu}
 				>
 					<div className="w-full max-w-5xl flex pt-10 pb-14">
 						<div className="mr-20">
@@ -144,6 +218,6 @@ export function DesktopNav() {
 					</div>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
