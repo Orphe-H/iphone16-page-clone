@@ -44,7 +44,6 @@ export function DesktopNav() {
 										: ""
 								}`}
 								onMouseEnter={() => openSubmenu(menu.key)}
-								onMouseLeave={closeSubmenu}
 							>
 								<span>{menu.label}</span>
 							</Link>
