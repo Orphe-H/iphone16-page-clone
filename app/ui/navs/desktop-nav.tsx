@@ -26,9 +26,22 @@ export function DesktopNav() {
 	const activeMenu = getActiveMenuData();
 
 	const submenuVariants = {
-		hidden: { opacity: 0, y: -10 },
-		visible: { opacity: 1, y: 0 },
-		exit: { opacity: 0, y: -10 },
+		hidden: { opacity: 0, y: -10, transition: { duration: 0.1 } },
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				duration: 0.2,
+				when: "beforeChildren",
+				staggerChildren: 0.05,
+			},
+		},
+		exit: { opacity: 0, y: -10, transition: { duration: 0.1 } },
+	};
+
+	const contentVariants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 },
 	};
 
 	useEffect(() => {
@@ -146,6 +159,7 @@ export function DesktopNav() {
 				<AnimatePresence>
 					{activeMenu && (
 						<motion.div
+							key={activeMenu.key}
 							ref={submenuRef}
 							className="bg-black flex justify-center absolute top-full left-0 right-0 z-50"
 							onMouseEnter={() => openSubmenu(activeMenu.key)}
@@ -153,9 +167,14 @@ export function DesktopNav() {
 							animate="visible"
 							exit="exit"
 							variants={submenuVariants}
-							transition={{ duration: 0.2, ease: "easeOut" }}
+							layout // layout animation
+							transition={{ duration: 0.1, ease: "easeInOut" }}
 						>
-							<div className="w-full max-w-5xl flex pt-10 pb-14">
+							<motion.div
+								className="w-full max-w-5xl flex pt-10 pb-14"
+								variants={contentVariants}
+								layout
+							>
 								<div className="mr-20">
 									{/* prelabel */}
 									<div className="text-xs text-gray-400 mb-3">
@@ -237,7 +256,7 @@ export function DesktopNav() {
 										)
 									)}
 								</div>
-							</div>
+							</motion.div>
 						</motion.div>
 					)}
 				</AnimatePresence>
