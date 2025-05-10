@@ -85,14 +85,23 @@ export function MobileNav() {
 					>
 						{/* back and close overlay actions */}
 						<div className="grid grid-cols-16 py-3 sticky top-0 bg-background z-10">
-							{activeSubMenu && (
-								<button
-									className="col-span-1 cursor-pointer"
-									onClick={goBack}
-								>
-									<i className="fa-solid fa-chevron-left text-xl"></i>
-								</button>
-							)}
+							<AnimatePresence mode="wait" initial={false}>
+								{activeSubMenu && (
+									<motion.button
+										initial={{ opacity: 0, x: 40 }}
+										animate={{ opacity: 1, x: 0 }}
+										exit={{ opacity: 0 }}
+										transition={{
+											duration: 0.3,
+											ease: "easeInOut",
+										}}
+										className="col-span-1 cursor-pointer"
+										onClick={goBack}
+									>
+										<i className="fa-solid fa-chevron-left text-xl"></i>
+									</motion.button>
+								)}
+							</AnimatePresence>
 
 							<button
 								className="col-span-1 col-start-16 cursor-pointer"
