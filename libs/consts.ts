@@ -295,7 +295,6 @@ export const MENUS = [
 					{ label: "AppleCare+", href: "#" },
 					{ label: "App Apple TV", href: "#" },
 					{ label: "Apple TV+", href: "#" },
-					{ label: "Apple TV+", href: "#" },
 					{ label: "App Maison", href: "#" },
 					{ label: "Apple Music", href: "#" },
 					{ label: "Siri", href: "#" },
