@@ -5,7 +5,7 @@ export default function Main() {
 		<main>
 			{/* promotion row */}
 			<div className="flex justify-center items-center bg-[#1d1d1f] py-4 px-10 text-center text-white">
-				<p className="text-sm max-w-prose">
+				<p className="text-sm">
 					Get $170–$630 in credit toward iPhone 16 or iPhone 16 Pro
 					when you trade in iPhone 12 or higher.*
 					<Link

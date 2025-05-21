@@ -1,13 +1,13 @@
-import Footer from "./ui/footer";
-import Main from "./ui/main";
-import Header from "./ui/header";
+import Footer from "./components/sections/footer";
+import Main from "./components/sections/main";
+import Header from "./components/sections/header";
 
 export default function Home() {
-  return (
-    <div>
-		<Header />
-		<Main />
-		<Footer />
-	</div>
-  );
+	return (
+		<div>
+			<Header />
+			<Main />
+			<Footer />
+		</div>
+	);
 }
