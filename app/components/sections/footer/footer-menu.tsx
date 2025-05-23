@@ -47,8 +47,8 @@ export function FooterMenu() {
 								<div>{block.title}</div>
 								<div>
 									<i
-										className={`fa-solid fa-chevron-down text-[#9b9b9c] transition-transform duration-400 ${
-											openIndexes[key] ? "rotate-180" : ""
+										className={`fa-solid fa-chevron-down text-[#9b9b9c] transition-transform duration-600 ${
+											openIndexes[key] ? "rotate-x-180" : ""
 										}`}
 									></i>
 								</div>
