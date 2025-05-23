@@ -4,9 +4,11 @@ import Header from "./components/sections/header/header";
 
 export default function Home() {
 	return (
-		<div>
-			<Header />
-			<Main />
+		<div className="min-h-screen flex flex-col">
+			<div className="flex-1">
+				<Header />
+				<Main />
+			</div>
 			<Footer />
 		</div>
 	);
