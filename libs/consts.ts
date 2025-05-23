@@ -393,3 +393,126 @@ export const MENUS = [
 		],
 	},
 ];
+
+export const FOOTER_COLUMNS = [
+	{
+		blocks: [
+			{
+				title: "S’informer et acheter",
+				links: [
+					"Store",
+					"Mac",
+					"iPad",
+					"iPhone",
+					"Watch",
+					"Vision",
+					"AirPods",
+					"TV & Maison",
+					"AirTag",
+					"Accessoires",
+					"Cartes Cadeaux",
+				],
+			},
+			{
+				title: "Apple Cartes",
+				links: ["Apple Pay"],
+			},
+		],
+	},
+	{
+		blocks: [
+			{
+				title: "Compte",
+				links: [
+					"Gérer le compte Apple",
+					"Compte Apple Store",
+					"iCloud.com",
+				],
+			},
+			{
+				title: "Divertissements",
+				links: [
+					"Apple One",
+					"Apple TV+",
+					"Apple Music",
+					"Apple Arcade",
+					"Apple Fitness+",
+					"Apple Podcasts",
+					"Apple Books",
+					"App Store",
+				],
+			},
+		],
+	},
+	{
+		blocks: [
+			{
+				title: "Apple Store",
+				links: [
+					"Trouver un Apple Store",
+					"Genius Bar",
+					"Today at Apple",
+					"Réservations de séances en groupe",
+					"Stage d'été Apple",
+					"App Apple Store",
+					"Produits reconditionnés et soldés",
+					"Apple Trade In",
+					"Financement",
+					"État de votre commande",
+					"Aide à l'achat",
+				],
+			},
+		],
+	},
+	{
+		blocks: [
+			{
+				title: "Pour les entreprises",
+				links: [
+					"Apple et les entreprises",
+					"Acheter pour votre entreprise",
+				],
+			},
+			{
+				title: "Pour l’Éducation",
+				links: ["Apple et l’Éducation", "Acheter pour l’université"],
+			},
+			{
+				title: "Pour la santé",
+				links: [
+					"Apple dans le secteur de la santé",
+					"Le Mac dans le secteur de la santé",
+					"La santé sur Apple Watch",
+				],
+			},
+		],
+	},
+	{
+		blocks: [
+			{
+				title: "Valeurs d’Apple",
+				links: [
+					"Accessibilité",
+					"Éducation",
+					"Environnement",
+					"Confidentialité",
+					"Chaîne logistique",
+				],
+			},
+			{
+				title: "À propos d’Apple",
+				links: [
+					"Newsroom",
+					"Direction d’Apple",
+					"Travailler chez Apple",
+					"Garantie",
+					"Investisseurs",
+					"Éthique et conformité",
+					"Événements",
+					"Création d’emplois en Europe",
+					"Contacter Apple",
+				],
+			},
+		],
+	},
+];

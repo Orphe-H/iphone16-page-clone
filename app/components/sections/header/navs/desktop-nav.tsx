@@ -93,7 +93,7 @@ export function DesktopNav() {
 		<>
 			<div
 				ref={wrapperRef}
-				className="hidden min-ml:flex flex-col bg-black relative z-50"
+				className="hidden ml:flex flex-col bg-black relative z-50"
 				onMouseLeave={() => {
 					// close when mouse is out of the wrappers
 					if (!submenuRef.current?.contains(document.activeElement)) {
