@@ -5,7 +5,7 @@ export function MenuResume() {
 	const menu = MENUS.find((menu) => menu.key === "iphone");
 
 	return (
-		<div className="bg-background py-24 px-10 md:px-30">
+		<div className="bg-background py-30 mx:py-40 px-10 md:px-30">
 			<div className="text-3xl md:text-5xl font-semibold mb-8">
 				iPhone
 			</div>

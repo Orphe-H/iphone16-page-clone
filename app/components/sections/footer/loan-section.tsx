@@ -9,7 +9,7 @@ export function LoanSection() {
 	const toogleGrid = () => setIsGridOpen(!isGridOpen);
 
 	return (
-		<div className="bg-black py-12 flex justify-center flex-col gap-y-10  px-10 md:px-20 xl:px-30">
+		<div className="bg-black py-12 flex justify-center flex-col space-y-8  px-10 md:px-20 xl:px-30">
 			<p className="text-center font-bold">
 				Un crédit vous engage et doit être remboursé.
 				<br />
@@ -37,7 +37,7 @@ export function LoanSection() {
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -20 }}
 							transition={{ duration: 0.2, ease: "easeInOut" }}
-							className="my-4 grid grid-cols-2 md:grid-cols-3 xl:auto-cols-max xl:grid-flow-col xl:grid-cols-none gap-10"
+							className="my-4 grid grid-cols-2 md:grid-cols-3 xl:auto-cols-max xl:grid-flow-col xl:grid-cols-none gap-28"
 						>
 							<div>
 								<div>Prix d’achat</div>
