@@ -27,7 +27,11 @@ export function LoanSection() {
 						pendant 36 mois au taux débiteur de 0%
 					</div>
 					<div>
-						<i className="fa-solid fa-chevron-down"></i>
+						<i
+							className={`fa-solid fa-chevron-down transition-transform duration-400 ${
+								isGridOpen ? "rotate-x-180" : ""
+							}`}
+						></i>
 					</div>
 				</div>
 				<AnimatePresence>
