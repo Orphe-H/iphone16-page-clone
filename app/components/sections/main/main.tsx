@@ -4,7 +4,7 @@ export default function Main() {
 	return (
 		<main>
 			{/* promotion row */}
-			<div className="flex justify-center items-center bg-[#1d1d1f] py-4 px-10 text-center text-white">
+			<div className="flex justify-center items-center bg-[#1d1d1f] py-4 px-10 text-center">
 				<p className="text-sm max-w-5xl">
 					Jusqu’au 18 juin, profitez d’une meilleure valeur de reprise
 					pour l’achat d’un nouvel iPhone*.
