@@ -1,4 +1,5 @@
 import { Copyright } from "./copyright";
+import { RecoveryWarning } from "./recovery-warning";
 
 export default function Footer() {
 	return (
@@ -7,7 +8,7 @@ export default function Footer() {
 			{/* menu resume section */}
 			<div className="flex justify-center">
 				<div className="px-4 divide-y divide-[#9b9b9c] max-w-5xl w-full">
-					{/* recovery warning section */}
+					<RecoveryWarning />
 					{/* menu */}
 					<Copyright />
 				</div>
