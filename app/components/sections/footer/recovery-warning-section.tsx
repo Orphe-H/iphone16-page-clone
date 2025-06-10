@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function RecoveryWarning() {
+export function RecoveryWarningSection() {
 	return (
 		<div className="py-4 text-xs space-y-4 text-[#9b9b9c]">
 			<p>

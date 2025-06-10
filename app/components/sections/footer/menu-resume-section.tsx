@@ -1,7 +1,7 @@
 import { MENUS } from "@/libs/consts";
 import Link from "next/link";
 
-export function MenuResume() {
+export function MenuResumeSection() {
 	const menu = MENUS.find((menu) => menu.key === "iphone");
 
 	return (

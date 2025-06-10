@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function Copyright() {
+export function CopyrightSection() {
 	return (
 		<div className="py-5 text-xs space-y-4">
 			<p className="text-[#9b9b9c] md:hidden">

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-export function FooterMenu() {
+export function FooterMenuSection() {
 	const BLOCKS = FOOTER_COLUMNS.flatMap((column) => column.blocks);
 
 	const [openIndexes, setOpenIndexes] = useState<Record<number, boolean>>({});
