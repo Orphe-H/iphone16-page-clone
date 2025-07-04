@@ -8,6 +8,12 @@ A faithful reproduction of Apple's official iPhone 16 Pro page, developed to dem
 
 _Experience the clone in action and compare it with the original Apple page!_
 
+## 🍎 Original Apple Page
+
+**[View Original](https://www.apple.com/fr/iphone-16-pro/)**
+
+_Check out the original iPhone 16 Pro page that inspired this clone_
+
 ## 📱 Features
 
 -   **Responsive Design**: Optimized for all devices (desktop, tablet, mobile)
