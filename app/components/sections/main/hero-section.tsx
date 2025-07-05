@@ -16,13 +16,13 @@ export default function HeroSection() {
 					<Image
 						width={846}
 						height={352}
-						src="/images/hero_apple_intelligence_headline__fwxxapju9a6i_xlarge_2x.png"
+						src="/images/hero/hero_apple_intelligence_headline__fwxxapju9a6i_xlarge_2x.png"
 						alt="Apple Intelligence Headline"
-						className="w-full h-auto"
+						className="w-full h-auto z-20"
 						priority
 					/>
 				</motion.div>
-				<div className="absolute top-1/4 lg:top-24 xl:top-32 inset-x-0 flex justify-center font-bold text-xl md:text-2xl lg:text-3xl z-20">
+				<div className="absolute z-10 top-1/4 lg:top-24 xl:top-32 flex justify-center font-bold text-xl md:text-2xl lg:text-3xl">
 					iPhone 16 Pro
 				</div>
 			</div>
