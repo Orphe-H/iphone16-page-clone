@@ -16,7 +16,7 @@ export default function HeroSection() {
 					<Image
 						width={846}
 						height={352}
-						src="/images/hero/hero_apple_intelligence_headline__fwxxapju9a6i_xlarge_2x.png"
+						src="/images/hero/concu_pour_apple_intelligence.png"
 						alt="Apple Intelligence Headline"
 						className="w-full h-auto z-20"
 						priority
